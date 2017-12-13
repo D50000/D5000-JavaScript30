@@ -52,3 +52,21 @@ JavaScript mini project
 	return replace(regex, `<span class="hl">${this.value}</span>`);
 	join('');
 	
+7.Array practices II
+	Some useful Array methods.
+	
+	ps:
+	Array.some()
+	Array.every()
+	Array.find()
+	Array.findIndex()
+	Array.splice()
+	
+8.HTML5 Canvas
+	Use the Canvas to draw on web.
+	
+	ps:
+	ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+	
