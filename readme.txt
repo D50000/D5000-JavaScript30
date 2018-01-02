@@ -1,4 +1,4 @@
-JavaScript mini project
+JavaScript mini projects
 
 1.Drum Kit
 	Use web to simulate the Drum Kit.Add listener on "keydown" and play the sound.
@@ -69,4 +69,61 @@ JavaScript mini project
 	ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
-	
+
+9.Log methods
+    Some useful log methods.
+
+    ps:
+    console.log
+    console.dir
+    console.warn
+    console.error
+    console.info
+    console.count
+    console.table
+    console.clear
+
+10.Checkboxes Hold Shift function
+    Checkboxes functions practices.
+
+    ps:
+    checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+    if (e.shiftKey && this.checked){loop the checkboxes and check the result}
+
+11.Custom Video Player
+    Change the Video Player UI.
+
+    ps:
+    Get Elements,addEventListener
+    toggle.button
+
+12.Key Sequence Detection
+    Website will detect the secret input password.
+
+    ps:
+    window.addEventListener('keyup', (e) => 
+    push() the element to the array and check it for answer.
+
+13.Slide in on Scroll
+    Images will slide in when the scroll moves.
+
+    ps:
+    dectect the scroll bar position and add the images animation
+    window.addEventListener('scroll', debounce(checkSlide));
+    (window.scrollY)
+    sliderImage.classList.add('active');
+
+14.JavaScript References
+    JS References VS copy.What's the different.
+
+    ps:
+    When you update the array-copy,you will also update the 
+    original array.Array and Object will reference back.
+
+    ps:
+    use es6 Spread mesthod
+    const team4 = [...players];
+
+
+
+
