@@ -124,6 +124,50 @@ JavaScript mini projects
     use es6 Spread mesthod
     const team4 = [...players];
 
+15.Local Storage
+    It can save the user data in the local browser.
 
+    ps:
+    items.push(item); //push to array
+    localStorage.setItem('items', JSON.stringify(items));
+
+16.Mouse Move Shadow
+    Image shadow will react with the mouse move.
+
+    ps:
+    addEventListener('mousemove', shadow);
+    function shadow(e) {
+    let { offsetX: x, offsetY: y } = e;
+    ......
+
+17.Sort without Articles
+    Sort the word.
+
+    ps:
+    function strip(bandName) {
+        return bandName.replace(/^(a |the |an )/i, '').trim();
+    }
+    const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+
+18.Adding Up Times with reduce
+    Use reduce to sum the data in the elements.
+
+    ps:
+    const seconds = timeNodes
+        .map(node => node.dataset.time)
+        .map(timeCode => {
+      const [mins, secs] = timeCode.split(':').map(parseFloat);
+      return (mins * 60) + secs;
+    })
+    .reduce((total, vidSeconds) => total + vidSeconds);
+
+19.Webcam fun
+    Server Real Time Camera.
+
+20.Speech Detection
+    Use the computer Microphone. 
+
+21.Geolocation
+    Use GPS to locate the position.
 
 
