@@ -170,4 +170,111 @@ JavaScript mini projects
 21.Geolocation
     Use GPS to locate the position.
 
+22.Follow Along Link
+    Fashion dynamic Highlighter.
+
+    ps:
+    add the addEventListener for the button.
+    this.getBoundingClientRect();  //get information of user react
+    change the css for the highlighter
+
+23.Speech Synthesis
+    A speecher that can control the speed and pitch.
+
+    ps:
+    import speech API
+    const msg = new SpeechSynthesisUtterance();
+    speechSynthesis.speak(msg);
+
+24.Sticky Navigation
+    Fashion sticky navigation.
+
+    ps:
+    window.addEventListener('scroll', fixNav);
+    function fixNav() {
+      if(window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+    }
+
+25.Event Capture, Propagation, Bubbling and Once.
+    What's the difference between these.
+    
+    ps:
+    Bubbling: Click the element and it will target through inner to outer tag, just like a bubble floating up.
+    
+    divs.forEach(div => div.addEventListener('click', logText, {
+        capture: ture, // 預設為false
+    }));
+
+    capture: just target the outer container.
+    Propagation:  e.stopPropagation(); //will just target the exactly what you click.
+
+    button.addEventListener('click', () => {
+        console.log('Click!!!');
+    }, {
+        once: true  //It just execute once, and will unbind the event.
+    });
+
+26.Stripe Follow Along Navigation
+    Fashion dynamic Highlighter Navigation.
+
+    ps:
+    addEventListener for the triggers.
+    getBoundingClientRect(); //get the x,y position
+    change the Dom and animation.
+
+27.Click and Drag
+    Fashion dynamic menu.
+
+    ps:
+    addEventListener for the menu
+    change the x,y and the classList of the Dom
+
+28.Video Speed Controller
+    A button that control the video play speed.
+
+    ps:
+    speed.addEventListener('mousemove', handleMove);
+    video.playbackRate;  //transform the speed bar x.y value
+
+29.Countdown Timer
+    A simple countdown timer.
+
+    ps:
+    declare the UI timerDisplay
+
+    countdown = setInterval(() => {
+        const secondsLeft = Math.round((then - Date.now()) / 1000);
+        // check if we should stop it!
+        if(secondsLeft < 0) {
+            clearInterval(countdown);
+            return;
+        }
+        // display it
+        displayTimeLeft(secondsLeft);
+    }, 1000);
+
+30.Whack a Mole
+    A simple Whack a Mole game.
+
+    ps:
+    moles.forEach(mole => mole.addEventListener('click', bonk));
+    
+    function bonk(e) {
+        if(!e.isTrusted) return; // cheater!
+        score++;
+        this.parentNode.classList.remove('up');
+        scoreBoard.textContent = score;
+    }
+
+
+
+
+
+
 
