@@ -1,4 +1,4 @@
-JavaScript mini projects
+#JavaScript mini projects
 
 1.Drum Kit
 	Use web to simulate the Drum Kit.Add listener on "keydown" and play the sound.
