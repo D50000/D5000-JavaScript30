@@ -1,4 +1,6 @@
 # JavaScript mini projects
+How to learn JavaScript ? There are lots of useful example here. Check it below!!
+reference: https://wesbos.com/
 
 # 1.Drum Kit
 	Use web to simulate the Drum Kit.Add listener on "keydown" and play the sound.
