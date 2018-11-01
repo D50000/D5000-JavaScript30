@@ -116,16 +116,33 @@ reference: https://wesbos.com/
     sliderImage.classList.add('active');
 
 # 14.JavaScript References
-    JS References VS copy.What's the different.
+    JS References (simple "=" to other variable) VS copy (copy array to a new array).What's the different.
 
     ps:
     When you update the array-copy,you will also update the 
     original array.Array and Object will reference back.
 
     ps:
-    use es6 Spread mesthod
+	For Array:
+    1.use es6 Spread mesthod
     const team4 = [...players];
-
+	
+	2.use players.slice() to actually copy.
+	
+	3.use empty array to concat. 
+	[].concat(players);
+	
+	For Object:
+	1. const x = Object.assign({}, person, { number: 99});
+	
+	2. const x2 = {...person}; 
+	
+	3. const dev = Object.assign({}, wes);
+	//Not support second layer deep properties.
+	
+	4. const dev2 = JSON.parse(JSON.stringify(wes));
+	//Not recommend. It destroyed the object reference.
+	
 # 15.Local Storage
     It can save the user data in the local browser.
 
