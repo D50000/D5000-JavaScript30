@@ -72,9 +72,10 @@ reference: https://wesbos.com/
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
 
-ps:canvas notes
-https://www.html5canvastutorials.com/tutorials/html5-canvas-images/
-http://entropymine.com/resamplescope/notes/browsers/
+ps: Canvas & Image notes
+ - https://www.html5canvastutorials.com/tutorials/html5-canvas-images/
+ - http://entropymine.com/resamplescope/notes/browsers/
+ - https://segmentfault.com/a/1190000010465626
 
 # 9.Log methods
     Some useful log methods.
