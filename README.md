@@ -72,12 +72,15 @@ reference: https://wesbos.com/
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
 
-ps: Canvas & Image notes
- - https://www.html5canvastutorials.com/tutorials/html5-canvas-images/
+ps: Image notes
+ - https://segmentfault.com/a/1190000010465626
  - https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
  - http://entropymine.com/resamplescope/notes/browsers/
- - https://segmentfault.com/a/1190000010465626
 
+ps: Canvas
+ - https://www.html5canvastutorials.com/tutorials/html5-canvas-images/
+ - https://yi-jy.com/2015/06/10/canvas-rotate-origin/
+ 
 # 9.Log methods
     Some useful log methods.
 
