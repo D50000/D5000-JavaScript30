@@ -158,6 +158,8 @@ ps: Canvas
     ps:
     items.push(item); //push to array
     localStorage.setItem('items', JSON.stringify(items));
+-   `window.localStorage`  - stores data with no expiration date
+-   `window.sessionStorage`  - stores data for one session (data is lost when the browser tab is closed)
 
 # 16.Mouse Move Shadow
     Image shadow will react with the mouse move.
