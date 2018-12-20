@@ -38,7 +38,10 @@ reference: https://wesbos.com/
 	Array.map()
 	Array.sort()
 	Array.reduce()
-	
+ps:
+ - forEach() — executes a provided function once for each array element.
+ - map() — creates a new array with the results of calling a provided function on every element in the calling array.
+
 # 5.Flex Panel Gallery
 	Design a fancy gallery,it has many steps of animation.
 	
