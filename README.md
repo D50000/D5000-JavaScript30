@@ -4,18 +4,18 @@ How to learn JavaScript ?
 There are lots of useful example here.  
 Check it below!!
 
-# 1.Drum Kit
+# 1. Drum Kit
 
 Use web to simulate the Drum Kit.Add listener on "keydown" and play the sound.
 
-# 2.Clock
+# 2. Clock
 
 Use css and js to create a clock.  
 ps:  
  js method: new Date();  
  CSS transition: transform 2s;
 
-# 3.Update CSS Variables with JS
+# 3. Update CSS Variables with JS
 
 User can dynamic control the CSS and it will change it immediately.
 
@@ -34,50 +34,53 @@ img {
 document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 ```
 
-# 4.Array practices I
+# 4. Array practices I
 
-    Some useful Array methods.
+Some useful Array methods.
 
-    ps:
-    Array.filter()
-    Array.map()
-    Array.sort()
-    Array.reduce()
-
-ps:
+```javascript
+Array.filter();
+Array.map();
+Array.sort();
+Array.reduce();
+```
 
 - forEach() — executes a provided function once for each array element.
 - map() — creates a new array with the results of calling a provided function on every element in the calling array.
 
-# 5.Flex Panel Gallery
+# 5. Flex Panel Gallery
 
-    Design a fancy gallery,it has many steps of animation.
+Design a fancy gallery,it has many steps of animation.
 
-    ps:
-    addEventListener('click', togglefunction);
-    CSS transition: transform 2s;
+```
+addEventListener('click', toggleFunctions);
+CSS transition: transform 2s;
+```
 
-# 6.A searching bar
+# 6. A searching bar
 
-    Search for the input text,and highlighting the result text.
+Search for the input text,and highlighting the result text.
 
-    ps:
-    array.filter => match(RegExp(text, 'gi'));
-    return replace(regex, `<span class="hl">${this.value}</span>`);
-    join('');
+```javascript
+array.filter => match(RegExp(text, 'gi'));
+return replace(regex, `<span class="hl">${this.value}</span>`);
+join('');
+```
 
-# 7.Array practices II
+# 7. Array practices II
 
-    Some useful Array methods.
+Some more useful Array methods.
 
-    ps:
-    Array.some()
-    Array.every()
-    Array.find()
-    Array.findIndex()
-    Array.splice()
+```javascript
+Array.find(); // return the element.
+Array.findIndex(); // return the element's index.
+Array.some(); // return a boolean, at least or not.
+Array.every(); // return all boolean, it check all elements.
+Array.slice(); // slice(start?: number, end?: number)
+Array.splice(); // splice(start: number, deleteCount?: number)
+```
 
-# 8.HTML5 Canvas
+# 8. HTML5 Canvas
 
     Use the Canvas to draw on web.
 
@@ -97,7 +100,7 @@ ps: Canvas
 - https://www.html5canvastutorials.com/tutorials/html5-canvas-images/
 - https://yi-jy.com/2015/06/10/canvas-rotate-origin/
 
-# 9.Log methods
+# 9. Log methods
 
     Some useful log methods.
 
@@ -111,7 +114,7 @@ ps: Canvas
     console.table
     console.clear
 
-# 10.Checkboxes Hold Shift function
+# 10. Checkboxes Hold Shift function
 
     Checkboxes functions practices.
 
@@ -119,7 +122,7 @@ ps: Canvas
     checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
     if (e.shiftKey && this.checked){loop the checkboxes and check the result}
 
-# 11.Custom Video Player
+# 11. Custom Video Player
 
     Change the Video Player UI.
 
@@ -127,7 +130,7 @@ ps: Canvas
     Get Elements,addEventListener
     toggle.button
 
-# 12.Key Sequence Detection
+# 12. Key Sequence Detection
 
     Website will detect the secret input password.
 
@@ -135,7 +138,7 @@ ps: Canvas
     window.addEventListener('keyup', (e) =>
     push() the element to the array and check it for answer.
 
-# 13.Slide in on Scroll
+# 13. Slide in on Scroll
 
     Images will slide in when the scroll moves.
 
@@ -145,7 +148,7 @@ ps: Canvas
     (window.scrollY)
     sliderImage.classList.add('active');
 
-# 14.JavaScript References
+# 14. JavaScript References
 
     JS References (simple "=" to other variable) VS copy (copy array to a new array).What's the different.
 
@@ -174,7 +177,7 @@ ps: Canvas
     4. const dev2 = JSON.parse(JSON.stringify(wes));
     //Not recommend. It destroyed the object reference.
 
-# 15.Local Storage
+# 15. Local Storage
 
     It can save the user data in the local browser.
 
@@ -185,7 +188,7 @@ ps: Canvas
 - `window.localStorage` - stores data with no expiration date
 - `window.sessionStorage` - stores data for one session (data is lost when the browser tab is closed)
 
-# 16.Mouse Move Shadow
+# 16. Mouse Move Shadow
 
     Image shadow will react with the mouse move.
 
@@ -195,7 +198,7 @@ ps: Canvas
     let { offsetX: x, offsetY: y } = e;
     ......
 
-# 17.Sort without Articles
+# 17. Sort without Articles
 
     Sort the word.
 
@@ -205,7 +208,7 @@ ps: Canvas
     }
     const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
 
-# 18.Adding Up Times with reduce
+# 18. Adding Up Times with reduce
 
     Use reduce to sum the data in the elements.
 
@@ -218,19 +221,19 @@ ps: Canvas
     })
     .reduce((total, vidSeconds) => total + vidSeconds);
 
-# 19.Webcam fun
+# 19. Webcam fun
 
     Server Real Time Camera.
 
-# 20.Speech Detection
+# 20. Speech Detection
 
     Use the computer Microphone.
 
-# 21.Geolocation
+# 21. Geolocation
 
     Use GPS to locate the position.
 
-# 22.Follow Along Link
+# 22. Follow Along Link
 
     Fashion dynamic Highlighter.
 
@@ -239,7 +242,7 @@ ps: Canvas
     this.getBoundingClientRect();  //get information of user react
     change the css for the highlighter
 
-# 23.Speech Synthesis
+# 23. Speech Synthesis
 
     A speecher that can control the speed and pitch.
 
@@ -248,7 +251,7 @@ ps: Canvas
     const msg = new SpeechSynthesisUtterance();
     speechSynthesis.speak(msg);
 
-# 24.Sticky Navigation
+# 24. Sticky Navigation
 
     Fashion sticky navigation.
 
@@ -264,7 +267,7 @@ ps: Canvas
       }
     }
 
-# 25.Event Capture, Propagation, Bubbling and Once.
+# 25. Event Capture, Propagation, Bubbling and Once.
 
     What's the difference between these.
 
@@ -284,7 +287,7 @@ ps: Canvas
         once: true  //It just execute once, and will unbind the event.
     });
 
-# 26.Stripe Follow Along Navigation
+# 26. Stripe Follow Along Navigation
 
     Fashion dynamic Highlighter Navigation.
 
@@ -301,7 +304,7 @@ ps: Canvas
     addEventListener for the menu
     change the x,y and the classList of the Dom
 
-# 28.Video Speed Controller
+# 28. Video Speed Controller
 
     A button that control the video play speed.
 
@@ -309,7 +312,7 @@ ps: Canvas
     speed.addEventListener('mousemove', handleMove);
     video.playbackRate;  //transform the speed bar x.y value
 
-# 29.Countdown Timer
+# 29. Countdown Timer
 
     A simple countdown timer.
 
@@ -327,7 +330,7 @@ ps: Canvas
         displayTimeLeft(secondsLeft);
     }, 1000);
 
-# 30.Whack a Mole
+# 30. Whack a Mole
 
     A simple Whack a Mole game.
 
@@ -340,5 +343,7 @@ ps: Canvas
         this.parentNode.classList.remove('up');
         scoreBoard.textContent = score;
     }
-#### Reference: 
+
+#### Reference:
+
 https://wesbos.com/
