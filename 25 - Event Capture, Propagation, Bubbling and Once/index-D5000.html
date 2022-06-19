@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Understanding JavaScript's Capture</title>
-</head>
+  </head>
 
-<body class="bod">
-
+  <body class="bod">
     <div class="one">
-        <div class="two">
-            <div class="three">
-            </div>
-        </div>
+      <div class="two">
+        <div class="three"></div>
+      </div>
     </div>
 
     <style>
-        html {
-            box-sizing: border-box;
-        }
-        
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
-        
-        div {
-            width: 100%;
-            padding: 100px;
-        }
-        
-        .one {
-            background: thistle;
-        }
-        
-        .two {
-            background: mistyrose;
-        }
-        
-        .three {
-            background: coral;
-        }
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      div {
+        width: 100%;
+        padding: 100px;
+      }
+
+      .one {
+        background: thistle;
+      }
+
+      .two {
+        background: mistyrose;
+      }
+
+      .three {
+        background: coral;
+      }
     </style>
 
     <button></button>
     <script>
-        const divs = document.querySelectorAll('div');
+      const divs = document.querySelectorAll("div");
 
-        function logText(e) {
-            console.log(this.classList.value);
-            //click execute top to bottom
+      function logText(e) {
+        console.log(this.classList.value);
+        //click execute top to bottom
 
-            e.stopPropagation();
-            //Stop bubbling .it will not find back the elements.
-        }
+        e.stopPropagation();
+        //Stop bubbling .it will not find back the elements.
+      }
 
-
-        divs.forEach(div => div.addEventListener('click', logText, {
-            capture: ture,
-            //Run the function down to up. capture default "false" up to down.
-            once: true
-                //Remove the event,unbind or execute once .
-        }));
+      divs.forEach((div) =>
+        div.addEventListener("click", logText, {
+          capture: true,
+          //Run the function down to up. capture default "false" up to down.
+          once: true,
+          //Remove the event,unbind or execute once .
+        })
+      );
     </script>
-</body>
-
+  </body>
 </html>

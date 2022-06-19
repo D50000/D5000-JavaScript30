@@ -219,139 +219,155 @@ const sortedBands = bands.sort((a, b) => (strip(a) > strip(b) ? 1 : -1));
 
 # 18. Adding Up Times with reduce
 
-    Use reduce to sum the data in the elements.
+Use reduce to sum the data in the elements.
 
-    ps:
-    const seconds = timeNodes
-        .map(node => node.dataset.time)
-        .map(timeCode => {
-      const [mins, secs] = timeCode.split(':').map(parseFloat);
-      return (mins * 60) + secs;
-    })
-    .reduce((total, vidSeconds) => total + vidSeconds);
+```javascript
+const seconds = timeNodes
+  .map((node) => node.dataset.time)
+  .map((timeCode) => {
+    const [mins, secs] = timeCode.split(":").map(parseFloat);
+    return mins * 60 + secs;
+  })
+  .reduce((total, vidSeconds) => total + vidSeconds);
+```
 
 # 19. Webcam fun
 
-    Server Real Time Camera.
+Server Real Time Camera.
 
 # 20. Speech Detection
 
-    Use the computer Microphone.
+Use the computer Microphone.
 
 # 21. Geolocation
 
-    Use GPS to locate the position.
+Use GPS to locate the position.
 
 # 22. Follow Along Link
 
-    Fashion dynamic Highlighter.
+Fashion dynamic Highlighter.
 
-    ps:
-    add the addEventListener for the button.
-    this.getBoundingClientRect();  //get information of user react
-    change the css for the highlighter
+```
+add the addEventListener for the button.
+this.getBoundingClientRect();
+//get information of user react change the css for the highlighter
+```
 
 # 23. Speech Synthesis
 
-    A speecher that can control the speed and pitch.
+A speecher that can control the speed and pitch.
 
-    ps:
-    import speech API
-    const msg = new SpeechSynthesisUtterance();
-    speechSynthesis.speak(msg);
+```javascript
+import speech API
+const msg = new SpeechSynthesisUtterance();
+speechSynthesis.speak(msg);
+```
 
 # 24. Sticky Navigation
 
-    Fashion sticky navigation.
+Fashion sticky navigation.
 
-    ps:
-    window.addEventListener('scroll', fixNav);
-    function fixNav() {
-      if(window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
-        document.body.classList.add('fixed-nav');
-      } else {
-        document.body.classList.remove('fixed-nav');
-        document.body.style.paddingTop = 0;
-      }
-    }
+```javascript
+window.addEventListener("scroll", fixNav);
+function fixNav() {
+  if (window.scrollY >= topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + "px";
+    document.body.classList.add("fixed-nav");
+  } else {
+    document.body.classList.remove("fixed-nav");
+    document.body.style.paddingTop = 0;
+  }
+}
+```
 
 # 25. Event Capture, Propagation, Bubbling and Once.
 
-    What's the difference between these.
+What's the difference between these.
 
-    ps:
-    Bubbling: Click the element and it will target through inner to outer tag, just like a bubble floating up.
+```javascript
+// Bubbling: Click the element and it will target through inner to outer tag, just like a bubble floating up.
 
-    divs.forEach(div => div.addEventListener('click', logText, {
-        capture: ture, // 預設為false
-    }));
+divs.forEach((div) =>
+  div.addEventListener("click", logText, {
+    capture: true, // 預設為false
+  })
+);
 
-    capture: just target the outer container.
-    Propagation:  e.stopPropagation(); //will just target the exactly what you click.
+// capture: just target the outer container.
+// Propagation:  e.stopPropagation(); will just target the exactly what you click.
 
-    button.addEventListener('click', () => {
-        console.log('Click!!!');
-    }, {
-        once: true  //It just execute once, and will unbind the event.
-    });
+button.addEventListener(
+  "click",
+  () => {
+    console.log("Click!!!");
+  },
+  {
+    once: true, //It just execute once, and will unbind the event.
+  }
+);
+```
 
 # 26. Stripe Follow Along Navigation
 
-    Fashion dynamic Highlighter Navigation.
+Fashion dynamic Highlighter Navigation.
 
-    ps:
-    addEventListener for the triggers.
-    getBoundingClientRect(); //get the x,y position
-    change the Dom and animation.
+```
+addEventListener for the triggers.
+getBoundingClientRect(); //get the x,y position
+change the Dom and animation.
+```
 
 # 27.Click and Drag
 
-    Fashion dynamic menu.
+Fashion dynamic menu.
 
-    ps:
-    addEventListener for the menu
-    change the x,y and the classList of the Dom
+```
+addEventListener for the menu
+change the x,y and the classList of the Dom
+```
 
 # 28. Video Speed Controller
 
-    A button that control the video play speed.
+A button that control the video play speed.
 
-    ps:
-    speed.addEventListener('mousemove', handleMove);
-    video.playbackRate;  //transform the speed bar x.y value
+```javascript
+speed.addEventListener("mousemove", handleMove);
+video.playbackRate; //transform the speed bar x.y value
+```
 
 # 29. Countdown Timer
 
-    A simple countdown timer.
+A simple countdown timer.
 
-    ps:
-    declare the UI timerDisplay
+```javascript
+// declare the UI timerDisplay
 
-    countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000);
-        // check if we should stop it!
-        if(secondsLeft < 0) {
-            clearInterval(countdown);
-            return;
-        }
-        // display it
-        displayTimeLeft(secondsLeft);
-    }, 1000);
+countdown = setInterval(() => {
+  const secondsLeft = Math.round((then - Date.now()) / 1000);
+  // check if we should stop it!
+  if (secondsLeft < 0) {
+    clearInterval(countdown);
+    return;
+  }
+  // display it
+  displayTimeLeft(secondsLeft);
+}, 1000);
+```
 
 # 30. Whack a Mole
 
-    A simple Whack a Mole game.
+A simple Whack a Mole game.
 
-    ps:
-    moles.forEach(mole => mole.addEventListener('click', bonk));
+```javascript:
+moles.forEach(mole => mole.addEventListener('click', bonk));
 
-    function bonk(e) {
-        if(!e.isTrusted) return; // cheater!
-        score++;
-        this.parentNode.classList.remove('up');
-        scoreBoard.textContent = score;
-    }
+function bonk(e) {
+    if(!e.isTrusted) return; // cheater!
+    score++;
+    this.parentNode.classList.remove('up');
+    scoreBoard.textContent = score;
+}
+```
 
 #### Reference:
 
