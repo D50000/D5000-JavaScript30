@@ -82,12 +82,13 @@ Array.splice(); // splice(start: number, deleteCount?: number)
 
 # 8. HTML5 Canvas
 
-    Use the Canvas to draw on web.
+Use the Canvas to draw on web.
 
-    ps:
-    ctx.moveTo(lastX, lastY);
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.stroke();
+```javascript
+ctx.moveTo(lastX, lastY);
+ctx.lineTo(e.offsetX, e.offsetY);
+ctx.stroke();
+```
 
 ps: Image notes
 
@@ -102,111 +103,119 @@ ps: Canvas
 
 # 9. Log methods
 
-    Some useful log methods.
+Some useful log methods.
 
-    ps:
-    console.log
-    console.dir
-    console.warn
-    console.error
-    console.info
-    console.count
-    console.table
-    console.clear
+```javascript
+console.log();
+console.dir();
+console.warn();
+console.error();
+console.info();
+console.count();
+console.table();
+console.clear();
+```
 
 # 10. Checkboxes Hold Shift function
 
-    Checkboxes functions practices.
+Checkboxes functions practices.
 
-    ps:
-    checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
-    if (e.shiftKey && this.checked){loop the checkboxes and check the result}
+```javascript
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+if (e.shiftKey && this.checked){loop the checkboxes and check the result}
+```
 
 # 11. Custom Video Player
 
-    Change the Video Player UI.
+Change the Video Player UI.
 
-    ps:
-    Get Elements,addEventListener
-    toggle.button
+```
+Get Elements, addEventListener
+toggle.button
+```
 
 # 12. Key Sequence Detection
 
-    Website will detect the secret input password.
+Website will detect the secret input password.
 
-    ps:
-    window.addEventListener('keyup', (e) =>
-    push() the element to the array and check it for answer.
+```javascript
+window.addEventListener('keyup', (e) =>
+push() the element to the array and check it for answer.
+```
 
 # 13. Slide in on Scroll
 
-    Images will slide in when the scroll moves.
+Images will slide in when the scroll moves.
 
-    ps:
-    dectect the scroll bar position and add the images animation
-    window.addEventListener('scroll', debounce(checkSlide));
-    (window.scrollY)
-    sliderImage.classList.add('active');
+```
+Detect the scroll bar position and add the images animation
+window.addEventListener('scroll', debounce(checkSlide));
+(window.scrollY)
+sliderImage.classList.add('active');
+```
 
 # 14. JavaScript References
 
-    JS References (simple "=" to other variable) VS copy (copy array to a new array).What's the different.
+JS References (simple "=" to other variable) VS copy (copy array to a new array).What's the different.
 
-    ps:
-    When you update the array-copy,you will also update the
-    original array.Array and Object will reference back.
+```javascript
+// When you update the array-copy,you will also update the
+// original array.Array and Object will reference back.
 
-    ps:
-    For Array:
-    1.use es6 Spread mesthod
-    const team4 = [...players];
+// For Array:
+// 1. use es6 Spread method
+const team4 = [...players];
 
-    2.use players.slice() to actually copy.
+// 2. use players.slice() to actually copy.
 
-    3.use empty array to concat.
-    [].concat(players);
+// 3. use empty array to concat.
+[].concat(players);
 
-    For Object:
-    1. const x = Object.assign({}, person, { number: 99});
+// For Object:
+const x = Object.assign({}, person, { number: 99 });
 
-    2. const x2 = {...person};
+const x2 = { ...person };
 
-    3. const dev = Object.assign({}, wes);
-    //Not support second layer deep properties.
+const dev = Object.assign({}, test);
+//Not support second layer deep properties.
 
-    4. const dev2 = JSON.parse(JSON.stringify(wes));
-    //Not recommend. It destroyed the object reference.
+const dev2 = JSON.parse(JSON.stringify(test));
+//Not recommend. It destroyed the object reference.
+```
 
 # 15. Local Storage
 
-    It can save the user data in the local browser.
+It can save the user data in the local browser.
 
-    ps:
-    items.push(item); //push to array
-    localStorage.setItem('items', JSON.stringify(items));
+```javascript
+items.push(item); //push to array
+localStorage.setItem("items", JSON.stringify(items));
+```
 
 - `window.localStorage` - stores data with no expiration date
 - `window.sessionStorage` - stores data for one session (data is lost when the browser tab is closed)
 
 # 16. Mouse Move Shadow
 
-    Image shadow will react with the mouse move.
+Image shadow will react with the mouse move.
 
-    ps:
-    addEventListener('mousemove', shadow);
-    function shadow(e) {
-    let { offsetX: x, offsetY: y } = e;
-    ......
+```javascript
+addEventListener("mousemove", shadow);
+function shadow(e) {
+  let { offsetX: x, offsetY: y } = e;
+}
+```
 
 # 17. Sort without Articles
 
-    Sort the word.
+Sort the word.
 
-    ps:
-    function strip(bandName) {
-        return bandName.replace(/^(a |the |an )/i, '').trim();
-    }
-    const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+```javascript
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/i, "").trim();
+}
+const sortedBands = bands.sort((a, b) => (strip(a) > strip(b) ? 1 : -1));
+```
 
 # 18. Adding Up Times with reduce
 
